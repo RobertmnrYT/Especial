@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title></title> 
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-image: url('Background.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "top-left top-right"
+                "bottom-left bottom-right"
+                ". bottom-text";
+            gap: 20px;
+            text-align: center;
+            position: relative; 
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .box {
+            width: 150px;
+            height: 200px;
+            border: 2px solid white;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .box-top-left {
+            grid-area: top-left;
+        }
+
+        .box-bottom-right {
+            grid-area: bottom-right;
+        }
+
+        .text {
+            color: white;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: left;
+            word-break: break-word;
+        }
+
+        .text-top-right {
+            grid-area: top-right;
+        }
+
+        .text-bottom-left {
+            grid-area: bottom-left;
+        }
+
+        .text-bottom {
+            grid-area: bottom-text;
+            position: absolute;
+            bottom: 20px; 
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 10px; 
+            font-size: 12px; 
+            line-height: 1.4; 
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+                height: auto;
+                min-height: 100vh;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                max-width: 100vw;
+                width: 100%;
+                position: static;
+            }
+            .box, .text {
+                width: 90vw;
+                max-width: 350px;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+            .box {
+                height: 140px;
+            }
+            .text {
+                padding: 12px;
+                font-size: 13px;
+            }
+            .text-bottom {
+                position: static;
+                width: 90vw;
+                max-width: 350px;
+                margin-bottom: 10px;
+                font-size: 11px;
+                padding: 8px;
+            }
+        }
+    </style> 
+</head> 
+<body> 
+    <audio autoplay>
+        <source src="MyGirl.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container"> 
+        <div class="box box-top-left"> 
+            <img src="MyGirl.jpg" alt="Image 1">
+        </div> 
+        <div class="text text-top-right">
+            E aí, pretinha, como você está? Estava planejando fazer algo diferente este ano, algo que estou aprendendo agora, com a facul e uns cursos aí. No momento é simples. Você sabe, na verdade acho que sempre soube, você foi a única mulher por quem eu realmente me apaixonei e que me animava a fazer algo novo, não é à toa que entrei na faculdade kk. Na real, eu te amo. Mas percebi que não temos nos falado tanto como antes, não sei como andam as coisas, não sei se você quer um relacionamento ainda, mas sei que sempre estarei na torcida por você. Sou seu maior fã.
+        </div> 
+        <div class="text text-bottom-left">
+            O que mais me dói é que não deu tempo de mostrar esse projeto para você, era para ser algo de Dia dos Namorados kk, é simples, porém fiz de coração. Quero que saiba que eu te amo, e que sempre estarei aqui para você, independente de qualquer coisa. Você sempre foi e sempre será a minha escolha, a minha garota, obrigado por tudo e me desculpa por tudo, não consigo ficar sem você, me dói tanto acordar e não ter nenhum "bom dia" seu, ou qualquer coisinha que seja. Sei que somos jovens, mas de verdade eu queria conquistar tudo com você, meu coração sempre será seu, queria que o seu fosse meu também, se cuida Jojoy. I love you so much.
+        </div> 
+        <div class="box box-bottom-right"> 
+            <img src="My-Girl.jpg" alt="Image 2">
+        </div> 
+    </div> 
+</body>
+</html>
